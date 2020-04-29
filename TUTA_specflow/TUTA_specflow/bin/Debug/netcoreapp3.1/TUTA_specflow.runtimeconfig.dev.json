@@ -1,8 +1,8 @@
 {
   "runtimeOptions": {
     "additionalProbingPaths": [
-      "C:\\Users\\eima\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\eima\\.nuget\\packages"
+      "C:\\Users\\javol\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\javol\\.nuget\\packages"
     ]
   }
 }

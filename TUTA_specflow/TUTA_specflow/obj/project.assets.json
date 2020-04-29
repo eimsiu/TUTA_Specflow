@@ -6447,19 +6447,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\eima\\.nuget\\packages\\": {}
+    "C:\\Users\\javol\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Unity\\Projects\\Turn based something\\TUTA_Specflow\\TUTA_specflow\\TUTA_specflow\\TUTA_specflow.csproj",
+      "projectUniqueName": "C:\\Users\\javol\\Desktop\\tuta_specflow\\TUTA_specflow\\TUTA_specflow\\TUTA_specflow.csproj",
       "projectName": "TUTA_specflow",
-      "projectPath": "D:\\Unity\\Projects\\Turn based something\\TUTA_Specflow\\TUTA_specflow\\TUTA_specflow\\TUTA_specflow.csproj",
-      "packagesPath": "C:\\Users\\eima\\.nuget\\packages\\",
-      "outputPath": "D:\\Unity\\Projects\\Turn based something\\TUTA_Specflow\\TUTA_specflow\\TUTA_specflow\\obj\\",
+      "projectPath": "C:\\Users\\javol\\Desktop\\tuta_specflow\\TUTA_specflow\\TUTA_specflow\\TUTA_specflow.csproj",
+      "packagesPath": "C:\\Users\\javol\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\javol\\Desktop\\tuta_specflow\\TUTA_specflow\\TUTA_specflow\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\eima\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\javol\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

@@ -69,6 +69,38 @@ namespace TUTA_specflow.Steps
             postCodeResult = JsonConvert.DeserializeObject<PostCodeObject>(json);
         }
 
-        
+        [Then(@"I should receive a status code of (.*)")]
+        public void ThenIShouldReceiveAStatusCodeOf(int responseCode)
+        {
+            responseCodeValue = responseCode;
+
+            Assert.That((int)HttpResponseMessage.StatusCode, Is.EqualTo(responseCodeValue));
+        }
+
+        [Then(@"I validate country should have '(.*)' value")]
+        public void ThenIValidateCountryShouldHaveValue(string country)
+        {
+            Assert.That(postCodeResult.result.country == country);
+        }
+        [Then(@"I validate that eastings and northings is (.*) and (.*) respectively")]
+        public void ThenIValidateThatEastingsAndNorthingsIsAndRespectively(int eastings, int northings)
+        {
+
+            Assert.That((int)PostCodeResult.result.eastings, Is.EqualTo(eastings));
+            Assert.That((int)PostCodeResult.result.northings, Is.EqualTo(northings));
+        }
+
+        [Then(@"I validate that code_adminDistrict is '(.*)'")]
+        public void ThenIValidateThatCode_AdminDistrictIs(string code_adminDistrict)
+        {
+            Assert.That((string)postCodeResult.result.codes.admin_district == code_adminDistrict);
+        }
+
+        [Then(@"I validate that responseObject, Object_Two and Object_Three have values of '(.*)', '(.*)' and '(.*)' respectively")]
+        public void ThenIValidateThatResponseObjectObject_TwoAndObject_ThreeHaveValuesOfAndRespectively(string ResponseObjectValue, string Obect_TwoValue, string Object_ThreeValue)
+        {
+            ScenarioContext.Current.Pending();
+        }
+
     }
 }

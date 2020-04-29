@@ -10,10 +10,18 @@ Scenario Outline: As a Service I validate values in API Response
 	Given I setup the request to GET using the provided '<postCode>' value
 	When I send the request
 	Then I should receive a response
+	And I should receive a status code of <responseCode>
+	And I validate country should have '<country>' value
+	And I validate that eastings and northings is <eastings> and <northings> respectively
+	And I validate that code_adminDistrict is '<code_adminDistrict>'
+	And I validate that responseObject, Object_Two and Object_Three have values of '<ResponseObjectValue>', '<Obect_TwoValue>' and '<Object_ThreeValue>' respectively
 
 	Examples: 
-	| postCode | responseCode | country         | eastings | northings | code_adminDistrict | responseObject | ResponseObjectValue		|
-	| LS3 1EP  | 200          | England		    | 429320   | 433751    | E08000035          | nhs_ha		 | Yorkshire and the Humber |
+	| postCode | responseCode | country         | eastings | northings | code_adminDistrict | responseObject | ResponseObjectValue		| Object_Two | Obect_TwoValue         | Object_Three | Object_ThreeValue     |
+	| LS3 1EP  | 200          | England		    | 429320   | 433751    | E08000035          | nhs_ha		 | Yorkshire and the Humber | lsoa       | Leeds 063B             | msoa         | Leeds 063             |
+	| OX49 5NU | 200          | England		    | 464438   | 195677    | E07000179          | nhs_ha		 | South Central            | lsoa       | South Oxfordshire 011B | msoa         | South Oxfordshire 011 |
+	| M32 0JG  | 200          | England		    | 379988   | 395476    | E08000009          | nhs_ha		 | North West               | lsoa       | Trafford 003C          | msoa         | Trafford 003          |
+	| NR34 2PF | 404          | error		    | error    | error     | error              | error		     | error                    | error      | error                  | error        | error                 |
 
 # tasks:
 #	
