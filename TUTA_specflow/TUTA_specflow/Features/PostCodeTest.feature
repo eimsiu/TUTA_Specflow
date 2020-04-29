@@ -10,10 +10,20 @@ Scenario Outline: As a Service I validate values in API Response
 	Given I setup the request to GET using the provided '<postCode>' value
 	When I send the request
 	Then I should receive a response
+	And I should receive a status code equal <responseCode>
+	And I validate country should have <country> value
+	And I validate that geographic Cartesian coordinates have <eastings> value and <northings> value
+	And I validate that codes.admin_district has value '<code_adminDistrict>'
+	And I validate that responseObject has value '<ResponseObjectValue>', ObjectTwo has value '<ObjectValue2nd>' and ObjectThree has value '<ObjectValue3rd>'
+
 
 	Examples: 
-	| postCode | responseCode | country         | eastings | northings | code_adminDistrict | responseObject | ResponseObjectValue		|
-	| LS3 1EP  | 200          | England		    | 429320   | 433751    | E08000035          | nhs_ha		 | Yorkshire and the Humber |
+	| postCode | responseCode | country | eastings | northings | code_adminDistrict | responseObject | ResponseObjectValue      | ObjectTwo  | ObjectValueTwo         | ObjectThree| ObjectValueThree     |
+	| LS3 1EP  | 200          | England | 429320   | 433751    | E08000035          | nhs_ha         | Yorkshire and the Humber | lsoa       | Leeds 063B             | msoa       | Leeds 063            |
+	| NR34 2PF | 404          | error   | error    | error     | error              | error          | error                    | error      | error                  | error      | error                |
+	| OX49 5NU | 200          | England | 464438   | 195677    | E07000179          | nhs_ha         | South Central            | lsoa       | South Oxfordshire 011B | msoa       | South Oxfordshire 011|
+	| M32 0JG  | 200          | England | 379988   | 395476    | E08000009          | nhs_ha         | North West               | lsoa       | Trafford 003C          | msoa       | Trafford 003         |
+	| NE30 1DP | 200          | England | 435958   | 568671    | E08000022          | nhs_ha         | North East               | lsoa       | North Tyneside 016C    | msoa       | North Tyneside 016   |
 
 # tasks:
 #	
@@ -34,8 +44,8 @@ Scenario Outline: As a Service I validate values in API Response
 #
 #	| postCode	| responseObject | ResponseObjectValue		|
 #	| LS3 1EP 	| nhs_ha		 | Yorkshire and the Humber |
-#	| LS3 1EP	| longitude      | Leeds 063B				|
-#	| LS3 1EP	| latitude       | Leeds 063				|  
+#	| LS3 1EP	| lsoa           | Leeds 063B				|
+#	| LS3 1EP	| msoa           | Leeds 063				|  
 
 
 # Notes: 

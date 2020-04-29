@@ -8,6 +8,8 @@ namespace TUTA_specflow.Entities.JsonObjects
 {
     class PostCodeObject
     {
+        internal object data;
+
         public int status { get; set; }
 
         public string error { get; set; }

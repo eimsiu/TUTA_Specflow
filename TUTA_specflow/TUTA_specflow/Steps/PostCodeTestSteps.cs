@@ -68,7 +68,38 @@ namespace TUTA_specflow.Steps
 
             postCodeResult = JsonConvert.DeserializeObject<PostCodeObject>(json);
         }
+        [Then(@"I should receive a status code equal (.*)")]
+        public void ThenIShouldReceiveAStatusCodeEqual(int responseCode)
+        {
+            responseCodeValue = responseCode;
 
-        
+            Assert.That((int)HttpResponseMessage.StatusCode, Is.EqualTo(responseCodeValue));
+        }
+        [Then(@"I validate country should have (.*) value")]
+        public void ThenIValidateCountryShouldHaveValue(string country)
+        {
+            Assert.That(postCodeResult.result.country == country);
+        }
+        [Then(@"I validate that geographic Cartesian coordinates have (.*) value and (.*) value")]
+        public void ThenIValidateThatGeographicCartesianCoordinatesHaveValueAndValue(int eastings, int northings)
+        {
+            Assert.That((int)postCodeResult.result.eastings, Is.EqualTo(eastings));
+            Assert.That((int)postCodeResult.result.northings, Is.EqualTo(northings));
+        }
+        [Then(@"I validate that codes\.admin_district has value '(.*)'")]
+        public void ThenIValidateThatCodes_Admin_DistrictHasValue(string code_adminDistrict)
+        {
+            Assert.That((string)postCodeResult.result.codes.admin_district == code_adminDistrict);
+        }
+
+        [Then(@"I validate that responseObject has value '(.*)', ObjectTwo has value '(.*)' and ObjectThree has value '(.*)'")]
+        public void ThenIValidateThatResponseObjectHasValueObjectTwoHasValueAndObjectThreeHasValue(string responseObject, string ObjectTwo, string ObjectThree)
+        {
+            
+        }
+
+
+
     }
+
 }
