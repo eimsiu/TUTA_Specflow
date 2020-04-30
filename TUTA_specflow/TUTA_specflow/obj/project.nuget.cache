@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Cer2Y7DcTBJKrMIDILtjEf+zSKzoeEgD2p4jMfle2O4+bA2WopGv4W3qZtJrfLlaQtfk/qEh+17V9n+A/RRTmA==",
+  "dgSpecHash": "eBoBzDAI4o/IuWBw0IGtSzu/Bw4Foz9/VFo4CDCm/AqSLGRRX/kw3gF5PTgC4TBfo2FvoahXQrDIN2mAshz4RA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Striokai\\Source\\Repos\\TUTA_Specflow2\\TUTA_specflow\\TUTA_specflow\\TUTA_specflow.csproj",
+  "projectFilePath": "C:\\Users\\Striokai\\source\\repos\\TUTA_Specflow2\\TUTA_specflow\\TUTA_specflow\\TUTA_specflow.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Striokai\\.nuget\\packages\\bodi\\1.4.1\\bodi.1.4.1.nupkg.sha512",
     "C:\\Users\\Striokai\\.nuget\\packages\\cucumber.messages\\6.0.1\\cucumber.messages.6.0.1.nupkg.sha512",

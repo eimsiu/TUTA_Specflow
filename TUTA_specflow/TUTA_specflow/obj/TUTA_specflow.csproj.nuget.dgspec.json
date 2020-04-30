@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Striokai\\Source\\Repos\\TUTA_Specflow2\\TUTA_specflow\\TUTA_specflow\\TUTA_specflow.csproj": {}
+    "C:\\Users\\Striokai\\source\\repos\\TUTA_Specflow2\\TUTA_specflow\\TUTA_specflow\\TUTA_specflow.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Striokai\\Source\\Repos\\TUTA_Specflow2\\TUTA_specflow\\TUTA_specflow\\TUTA_specflow.csproj": {
+    "C:\\Users\\Striokai\\source\\repos\\TUTA_Specflow2\\TUTA_specflow\\TUTA_specflow\\TUTA_specflow.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Striokai\\Source\\Repos\\TUTA_Specflow2\\TUTA_specflow\\TUTA_specflow\\TUTA_specflow.csproj",
+        "projectUniqueName": "C:\\Users\\Striokai\\source\\repos\\TUTA_Specflow2\\TUTA_specflow\\TUTA_specflow\\TUTA_specflow.csproj",
         "projectName": "TUTA_specflow",
-        "projectPath": "C:\\Users\\Striokai\\Source\\Repos\\TUTA_Specflow2\\TUTA_specflow\\TUTA_specflow\\TUTA_specflow.csproj",
+        "projectPath": "C:\\Users\\Striokai\\source\\repos\\TUTA_Specflow2\\TUTA_specflow\\TUTA_specflow\\TUTA_specflow.csproj",
         "packagesPath": "C:\\Users\\Striokai\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Striokai\\Source\\Repos\\TUTA_Specflow2\\TUTA_specflow\\TUTA_specflow\\obj\\",
+        "outputPath": "C:\\Users\\Striokai\\source\\repos\\TUTA_Specflow2\\TUTA_specflow\\TUTA_specflow\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Striokai\\AppData\\Roaming\\NuGet\\NuGet.Config",

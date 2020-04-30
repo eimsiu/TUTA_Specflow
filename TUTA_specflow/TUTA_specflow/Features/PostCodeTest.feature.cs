@@ -85,12 +85,12 @@ namespace TUTA_specflow.Features
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("As a Service I validate values in API Response")]
-        [NUnit.Framework.TestCaseAttribute("LS3 1EP", "200", "England", "429320", "433751", "E08000035", "nhs_ha", "Yorkshire and the Humber", "Leeds 063B", "lsoa", "Leeds 063", "msoa", null)]
+        [NUnit.Framework.TestCaseAttribute("LS3 1EP", "200", "England", "429320", "433751", "E08000035", "nhs_ha", "Yorkshire and the Humber", "lsoa", "Leeds 063B", "msoa", "Leeds 063", null)]
         [NUnit.Framework.TestCaseAttribute("NR34 2PF", "404", "error", "error", "error", "error", "error", "error", "error", "error", "error", "error", null)]
-        [NUnit.Framework.TestCaseAttribute("OX49 5NU", "200", "England", "464438", "195677", "E07000179", "nhs_ha", "South Central", "South Oxfordshire 011B", "lsoa", "South Oxfordshire 011", "msoa", null)]
-        [NUnit.Framework.TestCaseAttribute("M32 0JG", "200", "England", "379988", "395476", "E08000009", "nhs_ha", "North West", "Trafford 003C", "lsoa", "Trafford 003", "msoa", null)]
-        [NUnit.Framework.TestCaseAttribute("NE30 1DP", "200", "England", "435958", "568671", "E08000022", "nhs_ha", "North East", "North Tyneside 016C", "lsoa", "North Tyneside 016", "msoa", null)]
-        public virtual void AsAServiceIValidateValuesInAPIResponse(string postCode, string responseCode, string country, string eastings, string northings, string code_AdminDistrict, string responseObject, string responseObjectValue, string object_One, string object_One_Value, string object_Two, string object_Two_Value, string[] exampleTags)
+        [NUnit.Framework.TestCaseAttribute("OX49 5NU", "200", "England", "464438", "195677", "E07000179", "nhs_ha", "South Central", "lsoa", "South Oxfordshire 011B", "msoa", "South Oxfordshire 011", null)]
+        [NUnit.Framework.TestCaseAttribute("M32 0JG", "200", "England", "379988", "395476", "E08000009", "nhs_ha", "North West", "lsoa", "Trafford 003C", "msoa", "Trafford 003", null)]
+        [NUnit.Framework.TestCaseAttribute("NE30 1DP", "200", "England", "435958", "568671", "E08000022", "nhs_ha", "North East", "lsoa", "North Tyneside 016C", "msoa", "North Tyneside 016", null)]
+        public virtual void AsAServiceIValidateValuesInAPIResponse(string postCode, string responseCode, string country, string eastings, string northings, string code_AdminDistrict, string responseObject, string responseObjectValue, string objectTwo, string objectValueTwo, string objectThree, string objectValueThree, string[] exampleTags)
         {
             string[] tagsOfScenario = exampleTags;
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("As a Service I validate values in API Response", null, exampleTags);
@@ -137,6 +137,10 @@ this.FeatureBackground();
 #line hidden
 #line 16
  testRunner.And(string.Format("I validate that codes.admin_district has value \'{0}\'", code_AdminDistrict), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 17
+ testRunner.And(string.Format("I validate that responseObject has value \'{0}\', ObjectTwo has value \'<ObjectValue" +
+                            "2nd>\' and ObjectThree has value \'<ObjectValue3rd>\'", responseObjectValue), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
             this.ScenarioCleanup();

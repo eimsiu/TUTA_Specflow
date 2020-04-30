@@ -14,7 +14,7 @@ Scenario Outline: As a Service I validate values in API Response
 	And I validate country should have <country> value
 	And I validate that geographic Cartesian coordinates have <eastings> value and <northings> value
 	And I validate that codes.admin_district has value '<code_adminDistrict>'
-	And I validate that responseObject has value '<ResponseObjectValue>', ObjectTwo has value '<ObjectValue2nd>' and ObjectThree has value '<ObjectValue3rd>'
+	And I validate that '<ResponseObjectValue>' has value of either nhs_ha, msoa or lsoa
 
 
 	Examples: 
@@ -44,8 +44,8 @@ Scenario Outline: As a Service I validate values in API Response
 #
 #	| postCode	| responseObject | ResponseObjectValue		|
 #	| LS3 1EP 	| nhs_ha		 | Yorkshire and the Humber |
-#	| LS3 1EP	| lsoa           | Leeds 063B				|
-#	| LS3 1EP	| msoa           | Leeds 063				|  
+#	| LS3 1EP	| longitude      | Leeds 063B				|
+#	| LS3 1EP	| latitude       | Leeds 063				|  
 
 
 # Notes: 

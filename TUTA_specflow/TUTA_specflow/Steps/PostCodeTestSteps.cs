@@ -91,15 +91,16 @@ namespace TUTA_specflow.Steps
         {
             Assert.That((string)postCodeResult.result.codes.admin_district == code_adminDistrict);
         }
-
-        [Then(@"I validate that responseObject has value '(.*)', ObjectTwo has value '(.*)' and ObjectThree has value '(.*)'")]
-        public void ThenIValidateThatResponseObjectHasValueObjectTwoHasValueAndObjectThreeHasValue(string responseObject, string ObjectTwo, string ObjectThree)
+        [Then(@"I validate that '(.*)' has value of either nhs_ha, msoa or lsoa")]
+        public void ThenIValidateThatHasValueOfEitherNhs_HaMsoaOrLsoa(string ResponseObjectValue)
         {
-            
+            switch (ResponseObjectValue)
+            {
+                
+            }    
         }
-
-
-
+      
+            
+        
     }
-
 }
